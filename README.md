@@ -10,11 +10,11 @@ Please use it in study purpose only
 - Close all JetBrains applications
 - For first time only:
 ```shell script
-chmod +x runme.sh
+chmod +x mac/runme.sh
 ```
 - Run script:
 ```shell script
-./runme.sh
+./mac/runme.sh
 ```
 - Reboot
 
@@ -23,8 +23,8 @@ chmod +x runme.sh
 
 - Load job into launchctl:
 ```shell script
-chmod +x runme.sh
-./runme.sh --prepare-env
+chmod +x mac/runme.sh
+./mac/runme.sh --prepare-env
 ```
 
 - Unload job:
