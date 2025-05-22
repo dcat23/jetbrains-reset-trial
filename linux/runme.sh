@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ "$1" = "--prepare-env" ]; then
+# if [ "$1" = "--prepare-env" ]; then
 #  DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 #  mkdir -p ~/Scripts
 
@@ -19,15 +19,15 @@ if [ "$1" = "--prepare-env" ]; then
 #  echo
 #  echo "That's it, enjoy ;)"
 #  exit 0
-fi
+# fi
 
-if [ "$1" = "--launch-agent" ]; then
-  PROCESS=(idea webstorm datagrip phpstorm clion pycharm goland rubymine rider)
-  COMMAND_PRE=("${PROCESS[@]/#/MacOS/}")
+# if [ "$1" = "--launch-agent" ]; then
+#   PROCESS=(idea webstorm datagrip phpstorm clion pycharm goland rubymine rider)
+#   COMMAND_PRE=("${PROCESS[@]/#/MacOS/}")
 
-  # Kill all Intellij applications
-  kill -9 `ps aux | egrep $(IFS=$'|'; echo "${COMMAND_PRE[*]}") | awk '{print $2}'`
-fi
+#   # Kill all Intellij applications
+#   kill -9 `ps aux | egrep $(IFS=$'|'; echo "${COMMAND_PRE[*]}") | awk '{print $2}'`
+# fi
 
 # Reset Intellij evaluation
 for product in IntelliJIdea WebStorm DataGrip PhpStorm CLion PyCharm GoLand RubyMine Rider; do
@@ -48,8 +48,8 @@ for product in IntelliJIdea WebStorm DataGrip PhpStorm CLion PyCharm GoLand Ruby
   echo
 done
 
-#echo "Removing userPrefs files..."
-#rm -rf ~/.java/.userPrefs 2> /dev/null
+echo "Removing userPrefs files..."
+rm -rf ~/.java/.userPrefs 2> /dev/null
 
 echo
 echo "That's it, enjoy ;)"
